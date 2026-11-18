@@ -167,7 +167,12 @@ header.scrolled{background:rgba(28,28,31,.96);backdrop-filter:blur(10px);box-sha
 .prof{background:#fff;border:0;padding:0;display:flex;flex-direction:column;align-items:center;text-align:center;transition:transform .3s ease}
 .prof:hover{transform:translateY(-4px)}
 /* sem sombra e sem moldura: qualquer sombra revelaria o retângulo da arte no fundo branco */
-.prof-foto{width:100%;line-height:0}
+/* emenda suave: o rodapé da arte se dissolve no branco da seção, sem linha reta de corte */
+.prof-foto{width:100%;line-height:0;position:relative}
+.prof-foto .fade-borda{position:absolute;left:0;right:0;bottom:0;height:18%;pointer-events:none;z-index:2;
+  background:linear-gradient(180deg,rgba(255,255,255,0) 0%,rgba(255,255,255,.35) 50%,#fff 100%)}
+/* abaixo de 620 px o fade é maior, porque a arte aparece em escala menor */
+@media (max-width:620px){.prof-foto .fade-borda{height:24%}}
 /* 2:3 é a proporção da arte entregue: nada é cortado, o texto da arte fica legível.
    mix-blend-mode:multiply faz o branco da arte se fundir com o branco da seção, sem emenda. */
 .prof-foto img{width:100%;height:auto;display:block;object-fit:contain;mix-blend-mode:multiply}
@@ -458,7 +463,7 @@ footer .marca{margin-bottom:18px}
     </div>
     <div class="equipe-grid">
       <article class="prof rev">
-        <div class="prof-foto">
+        <div class="prof-foto"><span class="fade-borda" aria-hidden="true"></span>
           <img src="assets/equipe/jessica-arroyo.webp" srcset="assets/equipe/jessica-arroyo-640.webp 640w, assets/equipe/jessica-arroyo.webp 1024w" sizes="(max-width:620px) 88vw, 420px" alt="Jéssica Arroyo, sócia da JJM Associados: formada em Ciências Contábeis, MBA em Planejamento Tributário e especialista em Perícia Contábil e Financeira" width="1024" height="1536" loading="lazy" decoding="async">
         </div>
         <div class="prof-info">
@@ -472,7 +477,7 @@ footer .marca{margin-bottom:18px}
         </div>
       </article>
       <article class="prof rev">
-        <div class="prof-foto">
+        <div class="prof-foto"><span class="fade-borda" aria-hidden="true"></span>
           <img src="assets/equipe/michel-juniano.webp" srcset="assets/equipe/michel-juniano-640.webp 640w, assets/equipe/michel-juniano.webp 1024w" sizes="(max-width:620px) 88vw, 420px" alt="Michel Juniano, sócio e contador responsável da JJM Associados: formado em Ciências Contábeis, especialista em Reforma Tributária e em Legalização de Empresas" width="1024" height="1536" loading="lazy" decoding="async">
         </div>
         <div class="prof-info">
