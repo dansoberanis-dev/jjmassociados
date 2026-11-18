@@ -183,13 +183,16 @@ header.scrolled{background:rgba(28,28,31,.96);backdrop-filter:blur(10px);box-sha
 
 /* COMO FUNCIONA */
 .passos{display:grid;grid-template-columns:repeat(4,1fr);gap:26px;position:relative}
-.passos::before{content:"";position:absolute;top:34px;left:12%;right:12%;height:2px;background:repeating-linear-gradient(90deg,rgba(255,160,1,.35) 0 10px,transparent 10px 20px)}
+.passos::before{content:"";position:absolute;top:34px;left:12%;right:12%;height:2px;z-index:0;
+  background:repeating-linear-gradient(90deg,rgba(255,160,1,.35) 0 10px,transparent 10px 20px)}
 /* trilha que se desenha da etapa 1 até a 4 */
-.passos::after{content:"";position:absolute;top:34px;left:12%;right:12%;height:2px;background:linear-gradient(90deg,var(--laranja),#FFC24D);transform:scaleX(0);transform-origin:left center;opacity:.9}
+/* a trilha que se desenha passa POR BAIXO dos círculos (z-index 0), nunca por cima */
+.passos::after{content:"";position:absolute;top:34px;left:12%;right:12%;height:2px;z-index:0;
+  background:linear-gradient(90deg,var(--laranja),#FFC24D);transform:scaleX(0);transform-origin:left center;opacity:.9}
 .passos.em-rota::after{animation:trilha 2.2s ease-out forwards}
 @keyframes trilha{to{transform:scaleX(1)}}
-.passo{text-align:center;position:relative}
-.passo .n{width:68px;height:68px;border-radius:50%;background:#fff;border:3px solid rgba(255,160,1,.35);display:grid;place-items:center;margin:0 auto 20px;font-weight:800;font-size:1.4rem;color:var(--muted);position:relative;z-index:2;box-shadow:0 0 0 8px #fff;transition:border-color .45s ease,color .45s ease,transform .45s ease,box-shadow .45s ease}
+.passo{text-align:center;position:relative;z-index:1}
+.passo .n{width:68px;height:68px;border-radius:50%;background:#fff;border:3px solid rgba(255,160,1,.35);display:grid;place-items:center;margin:0 auto 20px;font-weight:800;font-size:1.4rem;color:var(--muted);position:relative;z-index:3;box-shadow:0 0 0 8px #fff;transition:border-color .45s ease,color .45s ease,transform .45s ease,box-shadow .45s ease}
 .passo .n::after{content:"";position:absolute;inset:-3px;border-radius:50%;border:3px solid var(--laranja);opacity:0;transform:scale(.6);transition:opacity .5s ease,transform .5s ease}
 .passo.on .n{border-color:var(--laranja);color:var(--chumbo-esc);transform:scale(1.06);box-shadow:0 0 0 8px #fff,0 12px 26px -12px rgba(255,160,1,.75)}
 .passo.on .n::after{opacity:1;transform:scale(1.18)}
