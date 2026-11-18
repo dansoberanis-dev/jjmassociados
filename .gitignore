@@ -1,0 +1,10 @@
+﻿PROMPT-MASTER*.md
+*.zip
+_backup/
+instalar.ps1
+atualizar.ps1
+LEIA-ME*.md
+KIT-DE-MARCA.md
+GUIA-secao-equipe.md
+proposta/
+*.pdf

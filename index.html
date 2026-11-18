@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JJM Associados | Contabilidade na Zona Leste de São Paulo</title>
+<meta name="description" content="Escritório de contabilidade online na Zona Leste de São Paulo. Serviços contábeis, fiscais e tributários, departamento pessoal, legalização de empresas e BPO Financeiro. Fale com um especialista.">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/brand/favicon-32.png">
+<link rel="icon" type="image/png" sizes="512x512" href="assets/brand/icon-512.png">
+<link rel="apple-touch-icon" href="assets/brand/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="JJM Associados | Contabilidade na Zona Leste de SP">
+<meta property="og:description" content="Contabilidade online para empresas de todos os segmentos: contábil, fiscal, departamento pessoal, legalização e BPO Financeiro.">
+<meta property="og:image" content="assets/brand/jjm-og.jpg">
+<meta property="og:locale" content="pt_BR">
+<meta name="theme-color" content="#232326">
+<meta name="robots" content="index, follow">
+<link rel="preload" as="image" href="assets/hero-contabilidade-pt.webp" type="image/webp" fetchpriority="high">
+<style>
+:root{
+  --laranja:#FFA001; --laranja-esc:#E08A00; --laranja-texto:#A35600; --laranja-claro:#FFF4E0;
+  --chumbo:#3A3A3D; --chumbo-esc:#232326; --cinza:#666666; --cinza-claro:#F4F4F5;
+  --branco:#fff; --texto:#2b2b2e; --muted:#6b6b72;
+  --raio:18px; --sombra:0 18px 40px -18px rgba(20,20,25,.25);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"Segoe UI",system-ui,-apple-system,Roboto,"Helvetica Neue",Arial,sans-serif;color:var(--texto);background:#fff;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.container{width:min(1180px,92%);margin:0 auto}
+h1,h2,h3{line-height:1.15;color:var(--chumbo-esc);letter-spacing:-.02em}
+.tag{display:inline-flex;align-items:center;gap:8px;font-size:.78rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--laranja-texto)}
+.hero .tag,.depo .tag,.contato-info .tag{color:var(--laranja)}
+.titulo{font-size:clamp(1.9rem,3.6vw,2.8rem);margin:12px 0 16px}
+.titulo span{color:var(--laranja)}
+.sub{color:var(--muted);max-width:620px;font-size:1.05rem}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:15px 28px;border-radius:999px;font-weight:700;font-size:.98rem;transition:.25s;border:2px solid transparent;cursor:pointer;font-family:inherit}
+.btn-primario{background:var(--laranja);color:var(--chumbo-esc);box-shadow:0 12px 26px -10px rgba(255,160,1,.7)}
+.btn-primario:hover{background:var(--laranja-esc);transform:translateY(-2px)}
+.btn-contorno{border-color:rgba(255,255,255,.35);color:#fff}
+.btn-contorno:hover{border-color:var(--laranja);color:var(--laranja)}
+.btn svg{width:18px;height:18px}
+section{padding:100px 0}
+
+/* HEADER */
+header{position:fixed;inset:0 0 auto 0;z-index:50;transition:.3s;background:linear-gradient(180deg,rgba(16,16,19,.9) 0%,rgba(16,16,19,.55) 60%,rgba(16,16,19,0) 100%)}
+header.scrolled{background:rgba(28,28,31,.96);backdrop-filter:blur(10px);box-shadow:0 8px 30px rgba(0,0,0,.25)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:84px}
+.marca{display:flex;align-items:center;gap:10px;color:#fff;white-space:nowrap}
+.marca img{height:46px;width:auto}
+.marca-simbolo{height:52px;width:auto;filter:drop-shadow(0 6px 14px rgba(0,0,0,.4))}
+.marca-txt b{font-size:.95rem;white-space:nowrap;font-weight:800;letter-spacing:.09em;color:#fff;display:block;line-height:1.1}
+.marca-txt small{font-size:.58rem;letter-spacing:.2em;text-transform:uppercase;color:var(--laranja);display:flex;align-items:center;gap:7px;margin-top:3px;white-space:nowrap}
+.marca-txt small::before,.marca-txt small::after{content:"";height:1px;width:14px;background:rgba(255,160,1,.65)}
+.marca b{font-size:1.35rem;letter-spacing:.02em;display:block;line-height:1}
+.marca small{font-size:.68rem;letter-spacing:.28em;text-transform:uppercase;color:var(--laranja)}
+.menu{display:flex;gap:22px;list-style:none;white-space:nowrap}
+.menu a{color:#e6e6e8;font-weight:500;font-size:.9rem;position:relative;white-space:nowrap}
+.menu a::after{content:"";position:absolute;left:0;bottom:-6px;width:0;height:2px;background:var(--laranja);transition:.25s}
+.menu a:hover{color:#fff}.menu a:hover::after{width:100%}
+.nav .btn{padding:10px 20px;font-size:.86rem;white-space:nowrap}
+.hamb{display:none;background:none;border:0;color:#fff;cursor:pointer}
+.hamb svg{width:30px;height:30px}
+
+/* HERO */
+.hero{background-color:var(--chumbo-esc);background-image:linear-gradient(90deg,rgba(26,26,29,.96) 0%,rgba(26,26,29,.92) 42%,rgba(26,26,29,.66) 70%,rgba(26,26,29,.58) 100%),radial-gradient(circle at 88% 12%,rgba(255,160,1,.20),transparent 46%),url('assets/hero-contabilidade-pt.webp');background-size:cover,cover,cover;background-position:center,center,64% 50%;background-repeat:no-repeat;color:#fff;padding:170px 0 120px;position:relative;overflow:hidden}
+/* camada de profundidade (sem grid): vinheta sutil nas bordas */
+.hero::after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 50% 40%,transparent 40%,rgba(15,15,17,.55) 100%);pointer-events:none}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:60px;align-items:center;position:relative;z-index:2}
+.hero h1{color:#fff;font-size:clamp(2.3rem,5vw,3.9rem);margin:18px 0 22px}
+.hero h1 em{font-style:normal;color:var(--laranja)}
+.hero p{color:#c9c9ce;font-size:1.12rem;max-width:560px}
+.hero-ctas{display:flex;gap:14px;flex-wrap:wrap;margin:36px 0 40px}
+.avaliacao{display:flex;align-items:center;gap:14px;color:#d8d8dc;font-size:.92rem}
+.estrelas{color:var(--laranja);letter-spacing:2px;font-size:1.1rem}
+.avaliacao strong{color:#fff;font-size:1.4rem}
+.hero-visual{position:relative;display:flex;justify-content:center}
+.circulo{width:min(400px,80vw);aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,rgba(255,160,1,.22),rgba(255,160,1,0) 68%);display:grid;place-items:center;position:relative}
+.circulo::before{content:"";position:absolute;inset:8%;border:1px dashed rgba(255,160,1,.35);border-radius:50%;animation:gira 40s linear infinite}
+.circulo img{width:52%;height:auto;filter:drop-shadow(0 20px 40px rgba(0,0,0,.45));animation:flutua 6s ease-in-out infinite}
+@keyframes gira{to{transform:rotate(360deg)}}
+@keyframes flutua{50%{transform:translateY(-12px)}}
+
+/* NÚMEROS */
+.numeros{margin-top:-60px;position:relative;z-index:5;padding:0}
+.numeros-grid{background:#fff;border-radius:var(--raio);box-shadow:var(--sombra);display:grid;grid-template-columns:repeat(4,1fr);overflow:hidden}
+.num{padding:34px 26px;text-align:center;border-right:1px solid #eee}
+.num:last-child{border:0}
+.num b{display:block;font-size:2.4rem;color:var(--chumbo-esc);line-height:1}
+.num b span{color:var(--laranja)}
+.num p{color:var(--muted);font-size:.92rem;margin-top:8px}
+
+/* SOBRE */
+.sobre-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+.sobre-visual{position:relative;background:linear-gradient(150deg,var(--chumbo),var(--chumbo-esc));border-radius:28px;padding:50px;color:#fff;overflow:hidden;min-height:420px;display:flex;flex-direction:column;justify-content:flex-end}
+.sobre-visual .bg-logo{position:absolute;right:-60px;top:-30px;width:320px;height:auto;opacity:.09}
+.sobre-visual .ano{font-size:5rem;font-weight:800;color:var(--laranja);line-height:1}
+.sobre-visual .destaque-ano{display:block;color:#fff;font-size:1.5rem;line-height:1.2;font-weight:700;margin:8px 0 10px}
+.sobre-visual p{color:#bdbdc2}
+.selo{position:absolute;top:30px;left:30px;background:var(--laranja);color:var(--chumbo-esc);font-weight:800;padding:8px 16px;border-radius:999px;font-size:.8rem;letter-spacing:.06em}
+.lista-check{list-style:none;margin:28px 0 34px;display:grid;gap:14px}
+.lista-check li{display:flex;gap:14px;align-items:flex-start}
+.lista-check li::before{content:"✓";flex:none;width:26px;height:26px;border-radius:50%;background:var(--laranja-claro);color:var(--laranja-esc);display:grid;place-items:center;font-weight:800;font-size:.85rem;margin-top:1px}
+.btn-escuro{background:var(--chumbo-esc);color:#fff}
+.btn-escuro:hover{background:var(--laranja);color:var(--chumbo-esc)}
+
+/* SERVIÇOS */
+.servicos{background:var(--cinza-claro)}
+.cab{text-align:center;display:flex;flex-direction:column;align-items:center;margin-bottom:56px}
+.cab .sub{text-align:center}
+.serv-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.serv{background:#fff;border-radius:var(--raio);padding:36px 30px;transition:.3s;position:relative;overflow:hidden;border:1px solid #ececef}
+.serv::after{content:"";position:absolute;left:0;bottom:0;height:4px;width:0;background:var(--laranja);transition:.35s}
+.serv:hover{transform:translateY(-6px);box-shadow:var(--sombra)}
+.serv:hover::after{width:100%}
+.ico{width:60px;height:60px;border-radius:16px;background:var(--chumbo-esc);color:var(--laranja);display:grid;place-items:center;margin-bottom:22px;transition:.3s}
+.serv:hover .ico{background:var(--laranja);color:var(--chumbo-esc)}
+.ico svg{width:28px;height:28px}
+.serv h3{font-size:1.2rem;margin-bottom:10px}
+.serv p{color:var(--muted);font-size:.95rem}
+.serv ul{list-style:none;margin-top:16px;display:grid;gap:6px}
+.serv ul li{font-size:.88rem;color:var(--cinza);padding-left:16px;position:relative}
+.serv ul li::before{content:"";position:absolute;left:0;top:.62em;width:6px;height:6px;border-radius:50%;background:var(--laranja)}
+
+/* BPO FINANCEIRO */
+.bpo{background:linear-gradient(150deg,var(--chumbo-esc),#2b2b30 55%,var(--chumbo));color:#fff;position:relative;overflow:hidden}
+.bpo::before{content:"";position:absolute;left:-140px;bottom:-160px;width:460px;height:460px;border-radius:50%;background:radial-gradient(circle,rgba(255,160,1,.22),transparent 68%)}
+.bpo-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:60px;align-items:center;position:relative;z-index:2}
+.bpo .titulo{color:#fff}
+.bpo .tag{color:var(--laranja)}
+.bpo .sub{color:#bcbcc2}
+.bpo-lista{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:12px 22px;margin:30px 0 34px}
+.bpo-lista li{display:flex;gap:10px;align-items:flex-start;font-size:.94rem;color:#e2e2e6}
+.bpo-lista li::before{content:"✓";flex:none;width:22px;height:22px;border-radius:50%;background:rgba(255,160,1,.16);color:var(--laranja);display:grid;place-items:center;font-weight:800;font-size:.75rem;margin-top:2px}
+.bpo-painel{background:#fff;color:var(--chumbo-esc);border-radius:24px;padding:34px;box-shadow:0 30px 60px -25px rgba(0,0,0,.55)}
+.bpo-painel h3{font-size:1.15rem;margin-bottom:4px}
+.bpo-painel>p{font-size:.86rem;color:var(--muted);margin-bottom:22px}
+.bpo-nums{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:22px}
+.bpo-num{background:var(--cinza-claro);border-radius:12px;padding:14px}
+.bpo-num b{display:block;font-size:1.5rem;line-height:1;color:var(--chumbo-esc)}
+.bpo-num b span{color:var(--laranja)}
+.bpo-num small{font-size:.74rem;color:var(--muted);display:block;margin-top:6px;line-height:1.3}
+.bpo-barras{display:grid;gap:10px}
+.bar{display:grid;gap:6px}
+.bar span{font-size:.78rem;font-weight:600;color:var(--chumbo);display:flex;justify-content:space-between}
+.bar i{height:9px;border-radius:99px;background:#ececef;position:relative;overflow:hidden;display:block}
+.bar i::after{content:"";position:absolute;inset:0 auto 0 0;width:var(--w,70%);border-radius:99px;background:linear-gradient(90deg,var(--laranja),#FFC24D)}
+.bpo-paraquem{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
+.bpo-paraquem span{font-size:.76rem;font-weight:600;padding:7px 13px;border-radius:999px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);color:#e9e9ec}
+
+/* SOLUÇÕES RÁPIDAS */
+.solucoes-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.solucao{background:#fff;border:1px solid #ececef;border-radius:var(--raio);padding:30px;display:flex;flex-direction:column;gap:10px;transition:.3s}
+.solucao:hover{transform:translateY(-5px);box-shadow:var(--sombra);border-color:rgba(255,160,1,.4)}
+.solucao .ico{width:52px;height:52px;border-radius:14px;margin-bottom:4px}
+.solucao .ico svg{width:24px;height:24px}
+.solucao h3{font-size:1.12rem}
+.solucao p{color:var(--muted);font-size:.93rem}
+.solucao .link{font-weight:700;font-size:.88rem;color:var(--laranja-texto);margin-top:auto;display:inline-flex;gap:6px;align-items:center}
+.solucao:hover .link{color:var(--chumbo-esc)}
+
+/* EQUIPE (seção oculta — ver flag MOSTRAR_EQUIPE no script) */
+.equipe{background:var(--cinza-claro)}
+.equipe-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.prof{background:#fff;border-radius:var(--raio);overflow:hidden;border:1px solid #ececef;transition:.3s;display:flex;flex-direction:column}
+.prof:hover{transform:translateY(-6px);box-shadow:var(--sombra);border-color:rgba(255,160,1,.45)}
+.prof-foto{aspect-ratio:1;background:linear-gradient(160deg,var(--chumbo-esc),var(--chumbo));display:grid;place-items:center;position:relative;overflow:hidden}
+.prof-foto img{width:100%;height:100%;object-fit:cover}
+.prof-foto .iniciais{font-size:3.2rem;font-weight:800;color:var(--laranja);letter-spacing:.04em}
+.prof-foto::after{content:"";position:absolute;inset:auto 0 0 0;height:5px;background:var(--laranja)}
+.prof-info{padding:26px 26px 30px}
+.prof-info h3{font-size:1.18rem;margin-bottom:4px}
+.prof-info .cargo{font-size:.8rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--laranja-texto);margin-bottom:14px;display:block}
+.prof-info ul{list-style:none;display:grid;gap:8px}
+.prof-info ul li{font-size:.9rem;color:var(--cinza);padding-left:16px;position:relative}
+.prof-info ul li::before{content:"";position:absolute;left:0;top:.62em;width:6px;height:6px;border-radius:50%;background:var(--laranja)}
+
+/* COMO FUNCIONA */
+.passos{display:grid;grid-template-columns:repeat(4,1fr);gap:26px;position:relative}
+.passos::before{content:"";position:absolute;top:34px;left:12%;right:12%;height:2px;background:repeating-linear-gradient(90deg,rgba(255,160,1,.35) 0 10px,transparent 10px 20px)}
+/* trilha que se desenha da etapa 1 até a 4 */
+.passos::after{content:"";position:absolute;top:34px;left:12%;right:12%;height:2px;background:linear-gradient(90deg,var(--laranja),#FFC24D);transform:scaleX(0);transform-origin:left center;opacity:.9}
+.passos.em-rota::after{animation:trilha 2.2s ease-out forwards}
+@keyframes trilha{to{transform:scaleX(1)}}
+.passo{text-align:center;position:relative}
+.passo .n{width:68px;height:68px;border-radius:50%;background:#fff;border:3px solid rgba(255,160,1,.35);display:grid;place-items:center;margin:0 auto 20px;font-weight:800;font-size:1.4rem;color:var(--muted);position:relative;z-index:2;box-shadow:0 0 0 8px #fff;transition:border-color .45s ease,color .45s ease,transform .45s ease,box-shadow .45s ease}
+.passo .n::after{content:"";position:absolute;inset:-3px;border-radius:50%;border:3px solid var(--laranja);opacity:0;transform:scale(.6);transition:opacity .5s ease,transform .5s ease}
+.passo.on .n{border-color:var(--laranja);color:var(--chumbo-esc);transform:scale(1.06);box-shadow:0 0 0 8px #fff,0 12px 26px -12px rgba(255,160,1,.75)}
+.passo.on .n::after{opacity:1;transform:scale(1.18)}
+.passo h3{font-size:1.08rem;margin-bottom:8px;opacity:.55;transition:opacity .45s ease}
+.passo p{color:var(--muted);font-size:.92rem;max-width:240px;margin:0 auto;opacity:.55;transition:opacity .45s ease}
+.passo.on h3,.passo.on p{opacity:1}
+@media (prefers-reduced-motion:reduce){
+  .passos::after{animation:none;transform:scaleX(1)}
+  .passo .n,.passo h3,.passo p{transition:none}
+  .passo h3,.passo p{opacity:1}
+  .passo .n{border-color:var(--laranja);color:var(--chumbo-esc)}
+  .passo .n::after{opacity:1;transform:scale(1.18)}
+}
+@media (max-width:980px){.passos::before,.passos::after{display:none}}
+
+/* SEGMENTOS / CTA */
+.faixa{background:linear-gradient(120deg,var(--laranja),#FFB733);padding:70px 0;position:relative;overflow:hidden}
+.faixa::before{content:"";position:absolute;right:-80px;top:-80px;width:320px;height:320px;background:url(assets/brand/jjm-simbolo.webp) center/contain no-repeat;opacity:.14}
+.faixa-in{display:flex;justify-content:space-between;align-items:center;gap:30px;flex-wrap:wrap;position:relative}
+.faixa h2{font-size:clamp(1.6rem,3vw,2.3rem);max-width:640px}
+.faixa p{color:#3d3d40;margin-top:8px;font-weight:500}
+
+.segmentos{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:10px}
+.chip{padding:12px 22px;border-radius:999px;background:#fff;border:1px solid #e3e3e7;font-weight:600;font-size:.92rem;color:var(--chumbo);display:flex;gap:8px;align-items:center;transition:.2s}
+.chip:hover{border-color:var(--laranja);color:var(--laranja-esc)}
+
+/* DEPOIMENTOS */
+.depo{background:var(--chumbo-esc);color:#fff;position:relative;overflow:hidden}
+.depo .titulo{color:#fff}.depo .sub{color:#b5b5ba}
+.depo-top{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;flex-wrap:wrap;margin-bottom:50px}
+.google-nota{display:flex;align-items:center;gap:18px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);padding:18px 26px;border-radius:16px}
+.google-nota b{font-size:2.6rem;line-height:1;color:#fff}
+.google-nota small{color:#b5b5ba;display:block}
+.depo-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.dep{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.09);border-radius:var(--raio);padding:32px;position:relative;transition:.3s}
+.dep:hover{border-color:var(--laranja);transform:translateY(-4px)}
+.dep .aspas{font-size:4rem;line-height:.6;color:var(--laranja);font-family:Georgia,serif;height:30px}
+.dep p{color:#e2e2e6;font-size:1.02rem;margin:10px 0 24px}
+.autor{display:flex;align-items:center;gap:12px}
+.av{width:44px;height:44px;border-radius:50%;background:var(--laranja);color:var(--chumbo-esc);display:grid;place-items:center;font-weight:800}
+.autor small{color:#9d9da3;display:block;font-size:.8rem}
+
+/* FAQ */
+.faq-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:60px;align-items:start}
+.faq-item{border-bottom:1px solid #e7e7ea}
+.faq-q{width:100%;background:none;border:0;text-align:left;padding:22px 0;font-size:1.05rem;font-weight:600;color:var(--chumbo-esc);display:flex;justify-content:space-between;gap:20px;cursor:pointer;font-family:inherit}
+.faq-q span{flex:none;width:30px;height:30px;border-radius:50%;background:var(--cinza-claro);display:grid;place-items:center;transition:.3s;color:var(--laranja-texto);font-size:1.2rem}
+.faq-item.aberto .faq-q span{transform:rotate(45deg);background:var(--laranja);color:var(--chumbo-esc)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease;color:var(--muted)}
+.faq-a p{padding-bottom:22px}
+
+/* CONTATO */
+.contato{background:var(--cinza-claro)}
+.contato-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:40px;background:#fff;border-radius:28px;overflow:hidden;box-shadow:var(--sombra)}
+.contato-info{background:linear-gradient(160deg,var(--chumbo),var(--chumbo-esc));color:#fff;padding:50px;position:relative;overflow:hidden}
+.contato-info h2{color:#fff;font-size:2rem;margin:12px 0}
+.contato-info>p{color:#bdbdc2}
+.info-lista{list-style:none;margin:34px 0;display:grid;gap:22px}
+.info-lista li{display:flex;gap:16px}
+.info-lista i{flex:none;width:46px;height:46px;border-radius:12px;background:rgba(255,160,1,.15);color:var(--laranja);display:grid;place-items:center}
+.info-lista i svg{width:22px;height:22px}
+.info-lista small{color:#9d9da3;display:block;font-size:.8rem;text-transform:uppercase;letter-spacing:.08em}
+.mapa{display:block;border-radius:16px;overflow:hidden;position:relative;height:150px;background:#2c2c30;border:1px solid rgba(255,255,255,.1)}
+.mapa svg{position:absolute;inset:0;width:100%;height:100%}
+.mapa span{position:absolute;bottom:12px;left:12px;background:var(--laranja);color:var(--chumbo-esc);font-weight:700;font-size:.8rem;padding:6px 12px;border-radius:999px}
+form{padding:50px 50px 50px 10px}
+form h3{font-size:1.5rem;margin-bottom:6px}
+form>p{color:var(--muted);margin-bottom:26px}
+.campos{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.campo{display:flex;flex-direction:column;gap:6px}
+.campo.full{grid-column:1/-1}
+.campo label{font-size:.85rem;font-weight:600;color:var(--chumbo)}
+.campo input,.campo select,.campo textarea{font-family:inherit;font-size:.95rem;padding:14px 16px;border:1.5px solid #e1e1e5;border-radius:12px;background:#fafafa;transition:.2s;color:var(--texto)}
+.campo textarea{resize:vertical;min-height:110px}
+.campo input:focus,.campo select:focus,.campo textarea:focus{outline:0;border-color:var(--laranja);background:#fff;box-shadow:0 0 0 4px rgba(255,160,1,.15)}
+form .btn{margin-top:22px;width:100%;justify-content:center}
+.ok{display:none;margin-top:16px;padding:14px;border-radius:12px;background:var(--laranja-claro);color:var(--laranja-texto);font-weight:600;text-align:center}
+
+/* FOOTER */
+footer{background:var(--chumbo-esc);color:#a9a9ae;padding:70px 0 0}
+.logo-horizontal{height:74px;width:auto;filter:drop-shadow(0 6px 14px rgba(0,0,0,.35))}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px;padding-bottom:50px}
+footer .marca .logo-horizontal{height:74px}
+footer .marca{margin-bottom:18px}
+footer h3{color:#fff;margin-bottom:18px;font-size:1rem}
+footer ul{list-style:none;display:grid;gap:10px;font-size:.92rem}
+footer ul a:hover{color:var(--laranja)}
+footer .marca{margin-bottom:18px}
+.foot-base{border-top:1px solid rgba(255,255,255,.08);padding:22px 0;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;font-size:.85rem}
+.credito{color:#a9a9ae}
+.credito strong{color:#fff;font-weight:700}
+.credito a{color:#fff;text-decoration:none;border-bottom:1px solid rgba(255,160,1,.6);padding-bottom:1px;transition:.2s}
+.credito a:hover,.credito a:focus-visible{color:var(--laranja);border-bottom-color:var(--laranja)}
+
+.wpp{position:fixed;right:22px;bottom:22px;width:60px;height:60px;border-radius:50%;background:#25D366;color:#fff;display:grid;place-items:center;box-shadow:0 12px 30px rgba(37,211,102,.45);z-index:60;transition:.25s}
+.wpp:hover{transform:scale(1.08)}
+.wpp svg{width:32px;height:32px;position:relative;z-index:2}
+/* pulso em degradê saindo de trás do botão */
+.wpp::before,.wpp::after{content:"";position:absolute;inset:0;border-radius:50%;pointer-events:none;z-index:0;
+  background:radial-gradient(circle,rgba(37,211,102,.55) 38%,rgba(37,211,102,.20) 62%,rgba(37,211,102,0) 78%);
+  animation:pulso 2.6s cubic-bezier(.25,.6,.3,1) infinite}
+.wpp::after{animation-delay:1.3s}
+@keyframes pulso{
+  0%{transform:scale(1);opacity:.95;box-shadow:0 0 0 0 rgba(37,211,102,.45)}
+  60%{opacity:.45}
+  100%{transform:scale(2.6);opacity:0;box-shadow:0 0 0 14px rgba(37,211,102,0)}
+}
+@media (prefers-reduced-motion:reduce){.wpp::before,.wpp::after{animation:none;opacity:0}}
+
+:focus-visible{outline:3px solid var(--laranja);outline-offset:3px;border-radius:6px}
+.rev{opacity:0;transform:translateY(30px);transition:opacity .8s ease,transform .8s ease}
+.rev.vis{opacity:1;transform:none}
+
+@media(max-width:980px){
+  .hero-grid,.sobre-grid,.faq-grid,.contato-grid,.bpo-grid{grid-template-columns:1fr}
+  .solucoes-grid,.equipe-grid{grid-template-columns:1fr 1fr}
+  .hero-visual{order:-1}.circulo{width:280px}
+  .serv-grid,.depo-grid{grid-template-columns:1fr 1fr}
+  .numeros-grid{grid-template-columns:1fr 1fr}
+  .num:nth-child(2){border-right:0}.num:nth-child(-n+2){border-bottom:1px solid #eee}
+  .passos{grid-template-columns:1fr 1fr;row-gap:40px}.passos::before{display:none}
+  .foot-grid{grid-template-columns:1fr 1fr}
+  form{padding:10px 30px 40px}
+  .menu,.nav>.btn{display:none}.hamb{display:block}
+  .marca-simbolo{height:44px}
+  .marca-txt b{font-size:.9rem}
+  .marca-txt small{font-size:.55rem;letter-spacing:.16em}
+  .marca-txt small::before,.marca-txt small::after{width:9px}
+  .menu.aberto{display:flex;flex-direction:column;position:absolute;top:84px;left:0;right:0;background:var(--chumbo-esc);padding:24px 6%;gap:18px}
+  header:has(.menu.aberto){background:var(--chumbo-esc)}
+}
+@media(max-width:620px){
+  section{padding:76px 0}
+  .serv-grid,.depo-grid,.campos,.foot-grid,.solucoes-grid,.equipe-grid{grid-template-columns:1fr}
+  .bpo-lista{grid-template-columns:1fr}
+  .bpo-painel{padding:26px}
+  .bpo-nums{grid-template-columns:1fr}
+  .contato-info{padding:36px 28px}
+  .sobre-visual{padding:34px;min-height:340px}
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header id="topo">
+  <div class="container nav">
+    <a href="#inicio" class="marca">
+      <img class="marca-simbolo" src="assets/brand/jjm-simbolo-160.webp" alt="Símbolo JJM Associados" width="160" height="202" decoding="async">
+      <div class="marca-txt"><b>JJM ASSOCIADOS</b><small>Consultoria Integrada</small></div>
+    </a>
+    <ul class="menu" id="menu">
+      <li><a href="#sobre">Sobre</a></li>
+      <li><a href="#servicos">Serviços</a></li>
+      <li><a href="#bpo">BPO Financeiro</a></li>
+      <li><a href="#como-funciona">Como funciona</a></li>
+      <li><a href="#depoimentos">Depoimentos</a></li>
+      <li><a href="#faq">Dúvidas</a></li>
+      <li><a href="#contato">Contato</a></li>
+    </ul>
+    <a href="#contato" class="btn btn-primario">Fale com um contador</a>
+    <button class="hamb" id="hamb" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="inicio">
+  <div class="container hero-grid">
+    <div>
+      <span class="tag">Contabilidade online · Zona Leste SP</span>
+      <h1>Sua empresa <em>organizada</em>, seus impostos <em>em dia</em> e você focado em crescer.</h1>
+      <p>Contabilidade completa e personalizada para empresas de todos os segmentos, com atendimento ágil, próximo e 100% online.</p>
+      <div class="hero-ctas">
+        <a href="#contato" class="btn btn-primario">Fale com um Especialista
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+      <div class="avaliacao">
+        <strong>5,0</strong>
+        <div><div class="estrelas">★★★★★</div>28 avaliações no Google</div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="circulo">
+        <img src="assets/brand/jjm-simbolo-420.webp" alt="Símbolo JJM Associados" width="420" height="530" decoding="async">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NÚMEROS -->
+<section class="numeros">
+  <div class="container">
+    <div class="numeros-grid rev">
+      <div class="num"><b><span>+</span><span class="cont" data-n="10" style="color:inherit">0</span></b><p>anos de experiência da equipe</p></div>
+      <div class="num"><b>2019</b><p>ano de fundação do escritório</p></div>
+      <div class="num"><b><span class="cont" data-n="5" style="color:inherit">0</span>,0<span>★</span></b><p>nota média no Google</p></div>
+      <div class="num"><b>100<span>%</span></b><p>atendimento online</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- SOBRE -->
+<section id="sobre">
+  <div class="container sobre-grid">
+    <div class="sobre-visual rev">
+      <img class="bg-logo" src="assets/brand/jjm-simbolo.webp" alt="" aria-hidden="true" width="600" height="757" loading="lazy" decoding="async">
+      <span class="selo">DESDE 2019</span>
+      <div class="ano">+10</div>
+      <strong class="destaque-ano">anos de experiência no setor contábil</strong>
+      <p>Uma equipe de profissionais altamente qualificados, comprometida com a saúde financeira do seu negócio.</p>
+    </div>
+    <div class="rev">
+      <span class="tag">Quem somos</span>
+      <h2 class="titulo">Contabilidade moderna, <span>próxima</span> e de confiança.</h2>
+      <p class="sub">A <strong>JJM Associados Escritório Contábil</strong> é especializada em serviços contábeis online. Fundada em maio de 2019, nasceu para oferecer soluções completas e personalizadas a empresas de diversos segmentos.</p>
+      <ul class="lista-check">
+        <li><div><strong>Atendimento online eficiente:</strong> resolva tudo sem sair da sua empresa.</div></li>
+        <li><div><strong>Soluções personalizadas:</strong> contábil, fiscal, departamento pessoal, legalização e BPO Financeiro sob medida para a sua realidade.</div></li>
+        <li><div><strong>Transparência e honestidade:</strong> o que nossos clientes mais destacam.</div></li>
+      </ul>
+      <a href="#contato" class="btn btn-escuro">Quero conversar com a JJM</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SEÇÃO EQUIPE — GUARDADA NA MANGA (oculta)
+     Para publicar: no <script> do fim da página, troque
+     const MOSTRAR_EQUIPE = false;  ->  true
+     Depois ajuste nomes, fotos (assets/equipe/nome.jpg) e formação.
+     ============================================================ -->
+<section class="equipe" id="equipe" data-oculta="true">
+  <div class="container">
+    <div class="cab rev">
+      <span class="tag">Nossa equipe</span>
+      <h2 class="titulo">A contabilidade da sua empresa nas mãos de <span>quem sabe o que faz</span></h2>
+      <p class="sub">Profissionais qualificados e com mais de 10 anos de experiência no setor, atuando lado a lado com o seu negócio.</p>
+    </div>
+    <div class="equipe-grid">
+      <article class="prof rev">
+        <div class="prof-foto">
+          <!-- <img src="assets/equipe/profissional-1.jpg" alt="Nome do profissional"> -->
+          <span class="iniciais">JJ</span>
+        </div>
+        <div class="prof-info">
+          <h3>Nome do profissional</h3>
+          <span class="cargo">Sócio · Contador responsável</span>
+          <ul>
+            <li>Formado em Ciências Contábeis</li>
+            <li>Especialista em Reforma Tributária</li>
+            <li>Especialista em Legalização de Empresas</li>
+          </ul>
+        </div>
+      </article>
+      <article class="prof rev">
+        <div class="prof-foto">
+          <!-- <img src="assets/equipe/profissional-2.jpg" alt="Nome do profissional"> -->
+          <span class="iniciais">JJ</span>
+        </div>
+        <div class="prof-info">
+          <h3>Nome do profissional</h3>
+          <span class="cargo">Sócia · Tributário e Financeiro</span>
+          <ul>
+            <li>Formada em Ciências Contábeis</li>
+            <li>MBA em Planejamento Tributário</li>
+            <li>Especialista em Perícia Contábil e Financeira</li>
+          </ul>
+        </div>
+      </article>
+      <article class="prof rev">
+        <div class="prof-foto">
+          <!-- <img src="assets/equipe/profissional-3.jpg" alt="Nome do profissional"> -->
+          <span class="iniciais">JJ</span>
+        </div>
+        <div class="prof-info">
+          <h3>Nome do profissional</h3>
+          <span class="cargo">Sócia · Departamento Pessoal</span>
+          <ul>
+            <li>Formada em Ciências Contábeis</li>
+            <li>Pós-graduada em Direito do Trabalho</li>
+            <li>Especialista em Gestão Financeira e RH</li>
+            <li>Regularização de clínicas e consultórios</li>
+          </ul>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- SERVIÇOS -->
+<section class="servicos" id="servicos">
+  <div class="container">
+    <div class="cab rev">
+      <span class="tag">Nossos serviços</span>
+      <h2 class="titulo">Tudo o que sua empresa precisa, <span>em um só lugar</span></h2>
+      <p class="sub">Cuidamos das obrigações para você cuidar do crescimento. Contábil, fiscal, pessoal, legalização e financeiro, com suporte humano e processos organizados.</p>
+    </div>
+    <div class="serv-grid">
+      <div class="serv rev">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2"/><path d="M8 6h8M8 10h2M14 10h2M8 14h2M14 14h2M8 18h2M14 18h2"/></svg></div>
+        <h3>Contabilidade Geral</h3>
+        <p>Escrituração contábil completa, balanços e demonstrativos para decisões seguras.</p>
+        <ul><li>Escrituração contábil completa</li><li>Balanço patrimonial e DRE</li><li>Demonstrações contábeis e ECD</li><li>Relatórios gerenciais e prestação de contas</li></ul>
+      </div>
+      <div class="serv rev">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 5 5 19"/><circle cx="6.5" cy="6.5" r="2.5"/><circle cx="17.5" cy="17.5" r="2.5"/></svg></div>
+        <h3>Consultoria Fiscal e Tributária</h3>
+        <p>Planejamento tributário para pagar somente o necessário, dentro da lei.</p>
+        <ul><li>Planejamento tributário e regime ideal</li><li>Apuração de impostos e contribuições</li><li>DCTF, EFD, ECF, DEFIS e SEDIF</li><li>Acompanhamento de fiscalizações</li></ul>
+      </div>
+      <div class="serv rev">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.8-3.6 3.4-5.5 6.5-5.5s5.7 1.9 6.5 5.5"/><path d="M16 4.5a3.5 3.5 0 0 1 0 7M18 14.8c2 .7 3.2 2.5 3.6 5.2"/></svg></div>
+        <h3>Departamento Pessoal</h3>
+        <p>Gestão completa dos colaboradores, da admissão à rescisão, sem dor de cabeça.</p>
+        <ul><li>Folha de pagamento e pró-labore</li><li>Admissões, demissões e rescisões</li><li>eSocial, FGTS e encargos</li><li>Planos de cargos e salários</li></ul>
+      </div>
+      <div class="serv rev">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V8l7-5 7 5v13"/><path d="M9 21v-6h6v6"/></svg></div>
+        <h3>Legalização de Empresas</h3>
+        <p>Abertura, alteração e encerramento de empresas com agilidade e segurança.</p>
+        <ul><li>Abertura, alteração e encerramento</li><li>Viabilidade e Junta Comercial</li><li>Prefeitura, Sefaz e Receita Federal</li><li>Alvarás, AVCB, CETESB e Vigilância</li></ul>
+      </div>
+      <div class="serv rev">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+        <h3>MEI e Simples Nacional</h3>
+        <p>Suporte para quem está começando e para quem quer crescer com segurança.</p>
+        <ul><li>Formalização e regularização de MEI</li><li>Simples Nacional e desenquadramento</li><li>Declarações anuais</li></ul>
+      </div>
+      <div class="serv rev">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M9 15l2 2 4-4"/></svg></div>
+        <h3>Imposto de Renda</h3>
+        <p>Declaração de IRPF para sócios e pessoas físicas, sem riscos de malha fina.</p>
+        <ul><li>Declaração de IRPF</li><li>Carnê-leão e ganho de capital</li><li>Certidões e parcelamentos</li><li>Regularização de pendências</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BPO FINANCEIRO -->
+<section class="bpo" id="bpo">
+  <div class="container bpo-grid">
+    <div class="rev">
+      <span class="tag">BPO Financeiro</span>
+      <h2 class="titulo">Terceirize o financeiro e tenha <span style="color:var(--laranja)">clareza total</span> do seu caixa</h2>
+      <p class="sub">No BPO Financeiro nós assumimos a rotina financeira da sua empresa: contas a pagar e a receber, conciliação bancária, fluxo de caixa e relatórios gerenciais. Você recebe a informação pronta para decidir, sem precisar contratar uma equipe interna.</p>
+      <ul class="bpo-lista">
+        <li>Contas a pagar e a receber</li>
+        <li>Conciliação bancária</li>
+        <li>Fluxo de caixa e DRE gerencial</li>
+        <li>Emissão e controle de notas fiscais</li>
+        <li>Boletos, cobrança e inadimplência</li>
+        <li>Controle orçamentário</li>
+        <li>Relatórios mensais em reunião</li>
+        <li>Integração com a contabilidade</li>
+      </ul>
+      <div class="bpo-paraquem">
+        <span>Clínicas</span><span>Comércios</span><span>Prestadores de serviço</span><span>Escritórios</span><span>Startups</span>
+      </div>
+      <div class="hero-ctas" style="margin:32px 0 0">
+        <a href="#contato" class="btn btn-primario">Quero um diagnóstico financeiro</a>
+        <a href="#contato" class="btn btn-contorno">Falar com um especialista</a>
+      </div>
+    </div>
+    <div class="rev">
+      <div class="bpo-painel">
+        <h3>Como fica a sua gestão</h3>
+        <p>Exemplo de painel mensal entregue aos clientes de BPO.</p>
+        <div class="bpo-nums">
+          <div class="bpo-num"><b><span>R$</span> 0</b><small>Saldo conciliado todo dia útil</small></div>
+          <div class="bpo-num"><b>100<span>%</span></b><small>Contas conciliadas no fechamento</small></div>
+          <div class="bpo-num"><b>D<span>+5</span></b><small>Relatório gerencial após o fechamento</small></div>
+          <div class="bpo-num"><b>0</b><small>Boletos sem conferência</small></div>
+        </div>
+        <div class="bpo-barras">
+          <div class="bar"><span>Contas a pagar<em>em dia</em></span><i style="--w:96%"></i></div>
+          <div class="bar"><span>Conciliação bancária<em>100%</em></span><i style="--w:100%"></i></div>
+          <div class="bar"><span>Fluxo de caixa<em>atualizado</em></span><i style="--w:88%"></i></div>
+          <div class="bar"><span>Relatórios<em>entregues</em></span><i style="--w:82%"></i></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SOLUÇÕES RÁPIDAS -->
+<section>
+  <div class="container">
+    <div class="cab rev">
+      <span class="tag">Precisa de ajuda?</span>
+      <h2 class="titulo">Soluções rápidas, <span>sem burocracia</span></h2>
+      <p class="sub">Processos expressos, com especialistas acompanhando você do início ao fim.</p>
+    </div>
+    <div class="solucoes-grid">
+      <div class="solucao rev">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg></div>
+        <h3>Abra sua empresa</h3>
+        <p>Consultoria qualificada em modo expresso: viabilidade, CNPJ, inscrições e alvarás.</p>
+        <a href="#contato" class="link">Fale conosco →</a>
+      </div>
+      <div class="solucao rev">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 8h-9a3 3 0 0 0-3 3 3 3 0 0 0 3 3h4a3 3 0 0 1 0 6H6"/><path d="m9 5 3-3 3 3M9 21l3 3 3-3" transform="translate(0,-2)"/></svg></div>
+        <h3>Troque de contador</h3>
+        <p>Migração sem sair de casa, com especialistas cuidando de toda a transição.</p>
+        <a href="#contato" class="link">Fale conosco →</a>
+      </div>
+      <div class="solucao rev">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 6v6c0 5 3.5 8.5 8 10 4.5-1.5 8-5 8-10V6z"/><path d="m9 12 2 2 4-4"/></svg></div>
+        <h3>Certificado digital</h3>
+        <p>Emissão ou renovação do certificado digital com segurança e comodidade.</p>
+        <a href="#contato" class="link">Fale conosco →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMO FUNCIONA -->
+<section id="como-funciona">
+  <div class="container">
+    <div class="cab rev">
+      <span class="tag">Como funciona</span>
+      <h2 class="titulo">Contabilidade online em <span>4 passos simples</span></h2>
+      <p class="sub">Sem filas, sem papelada acumulada. Tudo resolvido de forma digital e com acompanhamento próximo.</p>
+    </div>
+    <div class="passos">
+      <div class="passo rev"><div class="n">1</div><h3>Contato inicial</h3><p>Você nos conta sobre sua empresa pelo WhatsApp ou formulário.</p></div>
+      <div class="passo rev"><div class="n">2</div><h3>Diagnóstico</h3><p>Analisamos sua situação e montamos uma proposta sob medida.</p></div>
+      <div class="passo rev"><div class="n">3</div><h3>Migração fácil</h3><p>Cuidamos de toda a transição com seu contador anterior.</p></div>
+      <div class="passo rev"><div class="n">4</div><h3>Acompanhamento</h3><p>Rotina contábil em dia e suporte rápido sempre que precisar.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAIXA CTA -->
+<section class="faixa">
+  <div class="container faixa-in">
+    <div>
+      <h2>Vai abrir uma empresa ou quer trocar de contador?</h2>
+      <p>Fale com a JJM e receba uma proposta personalizada, sem compromisso.</p>
+    </div>
+    <a href="#contato" class="btn btn-escuro">Solicitar proposta</a>
+  </div>
+</section>
+
+<!-- SEGMENTOS -->
+<section style="padding:80px 0">
+  <div class="container">
+    <div class="cab rev" style="margin-bottom:30px">
+      <span class="tag">Segmentos atendidos</span>
+      <h2 class="titulo">Atendemos empresas de <span>diversos setores</span></h2>
+    </div>
+    <div class="segmentos rev">
+      <span class="chip">Comércio</span><span class="chip">Prestadores de serviço</span>
+      <span class="chip">Indústria</span><span class="chip">Tecnologia</span>
+      <span class="chip">Alimentação</span><span class="chip">Saúde</span>
+      <span class="chip">Transporte</span><span class="chip">Construção civil</span>
+      <span class="chip">Profissionais liberais</span><span class="chip">MEI e startups</span>
+    </div>
+  </div>
+</section>
+
+<!-- DEPOIMENTOS -->
+<section class="depo" id="depoimentos">
+  <div class="container">
+    <div class="depo-top rev">
+      <div>
+        <span class="tag">Depoimentos</span>
+        <h2 class="titulo">Quem confia na JJM, <span style="color:var(--laranja)">recomenda</span></h2>
+        <p class="sub">Avaliações reais de clientes no Google.</p>
+      </div>
+      <div class="google-nota">
+        <b>5,0</b>
+        <div><div class="estrelas">★★★★★</div><small>28 avaliações no Google</small></div>
+      </div>
+    </div>
+    <div class="depo-grid">
+      <div class="dep rev">
+        <div class="aspas">“</div>
+        <div class="estrelas">★★★★★</div>
+        <p>Excelente profissional, muito correto e honesto no serviço que faz.</p>
+        <div class="autor"><div class="av">C</div><div><strong>Cliente JJM</strong><small>Avaliação no Google</small></div></div>
+      </div>
+      <div class="dep rev">
+        <div class="aspas">“</div>
+        <div class="estrelas">★★★★★</div>
+        <p>Profissionais super competentes. 100% indico!</p>
+        <div class="autor"><div class="av">C</div><div><strong>Cliente JJM</strong><small>Avaliação no Google</small></div></div>
+      </div>
+      <div class="dep rev">
+        <div class="aspas">“</div>
+        <div class="estrelas">★★★★★</div>
+        <p>Ótimo profissional, sempre que acionado a resposta é rápida e eficiente.</p>
+        <div class="autor"><div class="av">C</div><div><strong>Cliente JJM</strong><small>Avaliação no Google</small></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="container faq-grid">
+    <div class="rev">
+      <span class="tag">Dúvidas frequentes</span>
+      <h2 class="titulo">Perguntas que <span>sempre recebemos</span></h2>
+      <p class="sub">Não encontrou o que procurava? Fale diretamente com nossa equipe.</p>
+      <a href="#contato" class="btn btn-primario" style="margin-top:26px">Tirar minha dúvida</a>
+    </div>
+    <div class="rev">
+      <div class="faq-item"><button class="faq-q">Como funciona a contabilidade online?<span>+</span></button><div class="faq-a"><p>Toda a comunicação e o envio de documentos acontecem de forma digital, por WhatsApp, e-mail e reuniões online. Você tem o mesmo acompanhamento de um escritório tradicional, com muito mais agilidade.</p></div></div>
+      <div class="faq-item"><button class="faq-q">Atendem apenas empresas da Zona Leste de SP?<span>+</span></button><div class="faq-a"><p>Não! Nosso escritório fica na Zona Leste de São Paulo, mas, por sermos online, atendemos empresas de toda a cidade e de outras regiões do Brasil.</p></div></div>
+      <div class="faq-item"><button class="faq-q">É difícil trocar de contador?<span>+</span></button><div class="faq-a"><p>Não. Nós cuidamos de toda a transição com o seu contador atual, solicitando a documentação necessária para que nada fique para trás.</p></div></div>
+      <div class="faq-item"><button class="faq-q">Vocês abrem empresas e MEI?<span>+</span></button><div class="faq-a"><p>Sim. Fazemos todo o processo de legalização: escolha do enquadramento, abertura do CNPJ, inscrições, alvarás e licenças.</p></div></div>
+      <div class="faq-item"><button class="faq-q">O que é BPO Financeiro e para quem serve?<span>+</span></button><div class="faq-a"><p>É a terceirização da rotina financeira da empresa: contas a pagar e a receber, conciliação bancária, emissão de notas, cobrança e relatórios gerenciais. Serve para quem quer controle do caixa sem contratar um financeiro interno, de clínicas e comércios a prestadores de serviço e escritórios.</p></div></div>
+      <div class="faq-item"><button class="faq-q">Quanto custa a mensalidade?<span>+</span></button><div class="faq-a"><p>O valor depende do porte da empresa, do regime tributário, do número de funcionários e do volume de movimentação. Solicite uma proposta personalizada, gratuita e sem compromisso.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTATO -->
+<section class="contato" id="contato">
+  <div class="container">
+    <div class="contato-grid rev">
+      <div class="contato-info">
+        <span class="tag">Contato</span>
+        <h2>Vamos conversar?</h2>
+        <p>Envie sua mensagem e retornaremos o mais rápido possível.</p>
+        <ul class="info-lista">
+          <li><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></i>
+            <div><small>Endereço</small>R. Quetele, 01, Jardim São Francisco (Zona Leste)<br>São Paulo - SP, 03718-080</div></li>
+          <li><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></i>
+            <div><small>Atendimento</small>Segunda a sexta, das 9h às 18h</div></li>
+          <li><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></i>
+            <div><small>E-mail</small>contato@jjmassociados.com.br</div></li>
+        </ul>
+        <a class="mapa" href="https://www.google.com/maps/search/?api=1&query=R.+Quetele,+01+-+Jardim+Sao+Francisco,+S%C3%A3o+Paulo+-+SP,+03718-080" target="_blank" rel="noopener">
+          <svg viewBox="0 0 400 150" preserveAspectRatio="xMidYMid slice">
+            <rect width="400" height="150" fill="#2c2c30"/>
+            <g stroke="#3d3d42" stroke-width="10" fill="none"><path d="M-10 40 L410 60"/><path d="M-10 115 L410 100"/><path d="M90 -10 L120 160"/><path d="M260 -10 L240 160"/><path d="M330 -10 L380 160"/></g>
+            <g stroke="#35353a" stroke-width="4" fill="none"><path d="M0 80 L400 78"/><path d="M180 0 L175 150"/><path d="M40 0 L50 150"/></g>
+            <circle cx="205" cy="70" r="26" fill="rgba(255,160,1,.18)"/>
+            <path d="M205 82s-12-10.5-12-19.5a12 12 0 0 1 24 0c0 9-12 19.5-12 19.5z" fill="#FFA001"/>
+            <circle cx="205" cy="62" r="4.5" fill="#232326"/>
+          </svg>
+          <span>Ver no Google Maps →</span>
+        </a>
+      </div>
+      <form id="form">
+        <h3>Solicite seu orçamento</h3>
+        <p>Preencha os dados abaixo e entraremos em contato.</p>
+        <div class="campos">
+          <div class="campo"><label for="nome">Nome</label><input id="nome" required placeholder="Seu nome"></div>
+          <div class="campo"><label for="tel">WhatsApp</label><input id="tel" required placeholder="(11) 90000-0000"></div>
+          <div class="campo full"><label for="email">E-mail</label><input id="email" type="email" required placeholder="voce@empresa.com.br"></div>
+          <div class="campo full"><label for="assunto">Como podemos ajudar?</label>
+            <select id="assunto">
+              <option>Abrir uma empresa</option><option>Trocar de contador</option><option>Contabilidade geral</option>
+              <option>Consultoria fiscal e tributária</option><option>Departamento pessoal</option><option>BPO Financeiro</option><option>Certificado digital</option><option>MEI</option><option>Outro assunto</option>
+            </select></div>
+          <div class="campo full"><label for="msg">Mensagem</label><textarea id="msg" placeholder="Conte um pouco sobre sua empresa..."></textarea></div>
+        </div>
+        <button type="submit" class="btn btn-primario">Enviar mensagem
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m22 2-7 20-4-9-9-4z"/></svg></button>
+        <div class="ok" id="ok">✓ Mensagem enviada! Em breve a equipe JJM entrará em contato.</div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container foot-grid">
+    <div>
+      <a href="#inicio" class="marca"><img class="logo-horizontal" src="assets/brand/jjm-horizontal-460.webp" alt="JJM Associados, Consultoria Integrada" width="460" height="149" loading="lazy" decoding="async"></a>
+      <p style="font-size:.92rem;max-width:300px">Escritório de contabilidade online na Zona Leste de São Paulo. Soluções contábeis completas e personalizadas desde 2019.</p>
+    </div>
+    <div><h3>Serviços</h3><ul><li><a href="#servicos">Contabilidade geral</a></li><li><a href="#servicos">Consultoria tributária</a></li><li><a href="#servicos">Departamento pessoal</a></li><li><a href="#servicos">Legalização de empresas</a></li><li><a href="#bpo">BPO Financeiro</a></li></ul></div>
+    <div><h3>Institucional</h3><ul><li><a href="#sobre">Sobre nós</a></li><li><a href="#como-funciona">Como funciona</a></li><li><a href="#depoimentos">Depoimentos</a></li><li><a href="#faq">Dúvidas</a></li></ul></div>
+    <div><h3>Endereço</h3><ul><li>R. Quetele, 01</li><li>Jardim São Francisco, Zona Leste</li><li>São Paulo - SP</li><li>CEP 03718-080</li></ul></div>
+  </div>
+  <div class="container foot-base">
+    <span>© <span id="ano"></span> JJM Associados Escritório Contábil. Todos os direitos reservados.</span>
+    <span class="credito">Desenvolvido por <strong><a href="https://wa.me/5541984542307" target="_blank" rel="noopener">DS WEBDESIGN</a></strong></span>
+  </div>
+</footer>
+
+<!-- WhatsApp: substitua 5511900000000 pelo número real -->
+<a class="wpp" href="https://wa.me/5511900000000?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20JJM%20Associados!" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1s-.5-.1-.7.1-.8 1-.9 1.2-.3.2-.6.1a8 8 0 0 1-2.4-1.5 9 9 0 0 1-1.6-2c-.2-.3 0-.5.1-.6l.4-.5.3-.5v-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6a1.1 1.1 0 0 0-.8.4 3.4 3.4 0 0 0-1 2.5 6 6 0 0 0 1.2 3.1 13.5 13.5 0 0 0 5.2 4.6c1.9.8 2.7.9 3.6.7a3 3 0 0 0 2-1.4 2.5 2.5 0 0 0 .2-1.4c-.1-.1-.3-.2-.6-.3zM12 21.8a9.8 9.8 0 0 1-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A9.8 9.8 0 1 1 12 21.8zM20.5 3.5A11.8 11.8 0 0 0 1.9 17.7L.2 24l6.4-1.7A11.8 11.8 0 0 0 24 12a11.7 11.7 0 0 0-3.5-8.5z"/></svg>
+</a>
+
+<script>
+/* ============================================================
+   CHAVE DA SEÇÃO EQUIPE
+   false = seção fica guardada na manga (oculta e fora do menu)
+   true  = seção é publicada no site, com link automático no menu
+   ============================================================ */
+const MOSTRAR_EQUIPE = false;
+
+(function equipe(){
+  const sec = document.getElementById('equipe');
+  if(!sec) return;
+  if(!MOSTRAR_EQUIPE){
+    sec.style.display = 'none';
+    sec.removeAttribute('data-oculta');
+    return;
+  }
+  sec.removeAttribute('data-oculta');
+  const menu = document.getElementById('menu');
+  const li = document.createElement('li');
+  li.innerHTML = '<a href="#equipe">Equipe</a>';
+  const alvo = menu.querySelector('a[href="#bpo"]')?.parentElement || menu.querySelector('a[href="#servicos"]').parentElement;
+  alvo.insertAdjacentElement('afterend', li);
+  li.querySelector('a').onclick = () => menu.classList.remove('aberto');
+})();
+
+const header=document.getElementById('topo');
+const onScroll=()=>header.classList.toggle('scrolled',scrollY>30);
+addEventListener('scroll',onScroll);onScroll();
+
+const menu=document.getElementById('menu');
+const hamb=document.getElementById('hamb');
+hamb.onclick=()=>{
+  const aberto=menu.classList.toggle('aberto');
+  hamb.setAttribute('aria-expanded',aberto?'true':'false');
+  hamb.setAttribute('aria-label',aberto?'Fechar menu':'Abrir menu');
+};
+menu.querySelectorAll('a').forEach(a=>a.onclick=()=>{menu.classList.remove('aberto');hamb.setAttribute('aria-expanded','false');});
+
+const io=new IntersectionObserver(es=>es.forEach(e=>{
+  if(e.isIntersecting){e.target.classList.add('vis');
+    e.target.querySelectorAll('.cont').forEach(c=>{
+      const n=+c.dataset.n;let i=0;const t=setInterval(()=>{c.textContent=++i;if(i>=n)clearInterval(t)},90);
+    });
+    io.unobserve(e.target);}
+}),{threshold:.15});
+document.querySelectorAll('.rev').forEach((el,i)=>{el.style.transitionDelay=(i%3)*.1+'s';io.observe(el)});
+
+/* passos: aparição sequencial 1 -> 4 */
+const passosBox = document.querySelector('.passos');
+if(passosBox){
+  const passos = [...passosBox.querySelectorAll('.passo')];
+  passos.forEach(p=>{p.classList.remove('rev');p.style.transitionDelay='';});
+  const sequencia = () => {
+    passosBox.classList.add('em-rota');
+    passos.forEach((p,i)=>setTimeout(()=>p.classList.add('on'), 260 + i*520));
+  };
+  const ioPassos = new IntersectionObserver(es=>es.forEach(e=>{
+    if(e.isIntersecting){
+      const reduz = matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if(reduz){ passos.forEach(p=>p.classList.add('on')); passosBox.classList.add('em-rota'); }
+      else { sequencia(); }
+      ioPassos.disconnect();
+    }
+  }),{threshold:.35});
+  ioPassos.observe(passosBox);
+}
+
+document.querySelectorAll('.faq-q').forEach(b=>b.onclick=()=>{
+  const it=b.parentElement,a=it.querySelector('.faq-a'),open=it.classList.contains('aberto');
+  document.querySelectorAll('.faq-item').forEach(x=>{x.classList.remove('aberto');x.querySelector('.faq-a').style.maxHeight=0});
+  if(!open){it.classList.add('aberto');a.style.maxHeight=a.scrollHeight+'px'}
+});
+
+document.getElementById('form').onsubmit=e=>{
+  e.preventDefault();
+  document.getElementById('ok').style.display='block';
+  e.target.reset();
+};
+document.getElementById('ano').textContent=new Date().getFullYear();
+</script>
+</body>
+</html>

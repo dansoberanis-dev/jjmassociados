@@ -1,0 +1,22 @@
+KIT DE IDENTIDADE VISUAL - JJM ASSOCIADOS
+Consultoria Integrada | Laranja e Grafite
+
+01_PNG_Transparente: Marca atualizada com acabamento premium, fundo realmente transparente; logo vertical, horizontal e simbolo isolado em varios tamanhos. A versao Fundo_Escuro usa lettering claro.
+02_PNG_Fundo_Branco: Marca para documentos e aplicacoes que nao suportam transparencia.
+03_Web_JPG_WEBP: WebP transparente para sites (otimo tamanho/qualidade) e JPG com fundo branco.
+04_Vetorial_SVG_PDF_EPS: Vetores de producao feitos a partir do logotipo vetorial enviado originalmente; foram atualizados com degradês e brilho. Como se trata de uma adaptacao vetorial, o acabamento e ligeiramente mais simples que o da imagem premium. Use PDF/EPS/SVG vetorial quando precisar ampliar sem perder nitidez.
+05_Redes_Sociais_Icones: Favicon ICO, PNGs de tamanhos variados e imagens quadradas para perfil.
+06_Impressao_TIFF: Imagens em alta resolucao com metadados de 300 dpi, TIFF RGB e CMYK de referencia. A grafica deve confirmar perfil de cor, sangria e especificacoes do impresso antes de produzir.
+07_Preview_e_Guia: Imagem para comparar apresentacoes, cores e orientacoes.
+
+USO RECOMENDADO
+- Site: JJM_Logo_Horizontal_1200px.png ou JJM_Horizontal_Transparente.webp
+- Cabecalho de site com fundo escuro: JJM_Horizontal_Fundo_Escuro_Sem_Fundo.png
+- Cartao de visita: JJM_Logo_Horizontal_Vetorial.pdf (ou EPS)
+- Redes sociais: JJM_Perfil_Redes_1080.png ou simbolo isolado
+- Favicon: favicon.ico e PNG 32/192/512
+- Arquivos sem fundo: PNG transparente, WebP transparente e SVGs vetoriais
+
+CORES DE REFERENCIA: laranja #F58B10, ouro-claro #FFC332, grafite #303239, branco #FFFFFF. Degrades podem variar conforme o suporte.
+
+NOTA TECNICA: Os arquivos SVG/PDF/EPS na pasta vetorial sao vetores de verdade (com paths da arte originalmente enviada). Os arquivos PNG e WebP preservam mais fielmente a aparencia da versao premium atualizada; ampliar um bitmap alem da resolucao de origem nao cria detalhes novos. CMYK sem perfil ICC da grafica e apenas referencia, nao prova de cor.
