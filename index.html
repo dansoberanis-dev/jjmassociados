@@ -46,7 +46,7 @@ section{padding:100px 0}
 /* HEADER */
 header{position:fixed;inset:0 0 auto 0;z-index:50;transition:.3s;background:linear-gradient(180deg,rgba(16,16,19,.9) 0%,rgba(16,16,19,.55) 60%,rgba(16,16,19,0) 100%)}
 header.scrolled{background:rgba(28,28,31,.96);backdrop-filter:blur(10px);box-shadow:0 8px 30px rgba(0,0,0,.25)}
-.nav{display:flex;align-items:center;justify-content:space-between;height:84px}
+.nav{display:flex;align-items:center;justify-content:space-between;height:84px;gap:16px}
 .marca{display:flex;align-items:center;gap:10px;color:#fff;white-space:nowrap}
 .marca img{height:46px;width:auto}
 .marca-simbolo{height:52px;width:auto;filter:drop-shadow(0 6px 14px rgba(0,0,0,.4))}
@@ -55,12 +55,12 @@ header.scrolled{background:rgba(28,28,31,.96);backdrop-filter:blur(10px);box-sha
 .marca-txt small::before,.marca-txt small::after{content:"";height:1px;width:14px;background:rgba(255,160,1,.65)}
 .marca b{font-size:1.35rem;letter-spacing:.02em;display:block;line-height:1}
 .marca small{font-size:.68rem;letter-spacing:.28em;text-transform:uppercase;color:var(--laranja)}
-.menu{display:flex;gap:22px;list-style:none;white-space:nowrap}
-.menu a{color:#e6e6e8;font-weight:500;font-size:.9rem;position:relative;white-space:nowrap}
+.menu{display:flex;gap:clamp(9px,1.1vw,20px);list-style:none;white-space:nowrap;min-width:0}
+.menu a{color:#e6e6e8;font-weight:500;font-size:clamp(.74rem,.62vw + .18rem,.9rem);position:relative;white-space:nowrap}
 .menu a::after{content:"";position:absolute;left:0;bottom:-6px;width:0;height:2px;background:var(--laranja);transition:.25s}
 .menu a:hover{color:#fff}.menu a:hover::after{width:100%}
-.nav .btn{padding:10px 20px;font-size:.86rem;white-space:nowrap}
-.hamb{display:none;background:none;border:0;color:#fff;cursor:pointer}
+.nav .btn{padding:10px clamp(12px,.9vw,20px);font-size:clamp(.76rem,.5vw + .3rem,.86rem);white-space:nowrap;flex:none}
+.nav .hamb{display:none;background:none;border:0;color:#fff;cursor:pointer}
 .hamb svg{width:30px;height:30px}
 
 /* HERO */
@@ -162,19 +162,24 @@ header.scrolled{background:rgba(28,28,31,.96);backdrop-filter:blur(10px);box-sha
 
 /* EQUIPE (seção oculta — ver flag MOSTRAR_EQUIPE no script) */
 .equipe{background:var(--cinza-claro)}
-.equipe-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+/* grid se adapta à quantidade: 2 pessoas ficam centralizadas, 3 ocupam a linha toda */
+.equipe-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,340px));justify-content:center;gap:26px}
 .prof{background:#fff;border-radius:var(--raio);overflow:hidden;border:1px solid #ececef;transition:.3s;display:flex;flex-direction:column}
 .prof:hover{transform:translateY(-6px);box-shadow:var(--sombra);border-color:rgba(255,160,1,.45)}
-.prof-foto{aspect-ratio:1;background:linear-gradient(160deg,var(--chumbo-esc),var(--chumbo));display:grid;place-items:center;position:relative;overflow:hidden}
-.prof-foto img{width:100%;height:100%;object-fit:cover}
+.prof-foto{aspect-ratio:4/5;background:linear-gradient(160deg,var(--chumbo-esc),var(--chumbo));display:grid;place-items:center;position:relative;overflow:hidden}
+.prof-foto img{width:100%;height:100%;object-fit:cover;object-position:top center}
+/* tingimento laranja sobre o retrato: unifica as fotos e amarra na identidade */
+.prof-foto::before{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(180deg,rgba(255,160,1,.16) 0%,rgba(255,160,1,.04) 40%,rgba(35,35,38,.12) 100%);mix-blend-mode:multiply}
 .prof-foto .iniciais{font-size:3.2rem;font-weight:800;color:var(--laranja);letter-spacing:.04em}
-.prof-foto::after{content:"";position:absolute;inset:auto 0 0 0;height:5px;background:var(--laranja)}
+.prof-foto::after{content:"";position:absolute;inset:auto 0 0 0;height:5px;background:var(--laranja);z-index:2}
 .prof-info{padding:26px 26px 30px}
 .prof-info h3{font-size:1.18rem;margin-bottom:4px}
 .prof-info .cargo{font-size:.8rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--laranja-texto);margin-bottom:14px;display:block}
 .prof-info ul{list-style:none;display:grid;gap:8px}
 .prof-info ul li{font-size:.9rem;color:var(--cinza);padding-left:16px;position:relative}
 .prof-info ul li::before{content:"";position:absolute;left:0;top:.62em;width:6px;height:6px;border-radius:50%;background:var(--laranja)}
+/* card reservado: existe no código para receber o 3º profissional, não é exibido */
+.prof[data-reserva]{display:none}
 
 /* COMO FUNCIONA */
 .passos{display:grid;grid-template-columns:repeat(4,1fr);gap:26px;position:relative}
@@ -327,7 +332,7 @@ footer .marca{margin-bottom:18px}
   .passos{grid-template-columns:1fr 1fr;row-gap:40px}.passos::before{display:none}
   .foot-grid{grid-template-columns:1fr 1fr}
   form{padding:10px 30px 40px}
-  .menu,.nav>.btn{display:none}.hamb{display:block}
+  .menu,.nav>.btn{display:none}.nav .hamb{display:block}
   .marca-simbolo{height:44px}
   .marca-txt b{font-size:.9rem}
   .marca-txt small{font-size:.55rem;letter-spacing:.16em}
@@ -338,6 +343,10 @@ footer .marca{margin-bottom:18px}
 @media(max-width:620px){
   section{padding:76px 0}
   .serv-grid,.depo-grid,.campos,.foot-grid,.solucoes-grid,.equipe-grid{grid-template-columns:1fr}
+  .equipe-grid{max-width:400px;margin:0 auto}
+  /* no celular o retrato fica quadrado para não cortar o queixo */
+  .prof-foto{aspect-ratio:1}
+  .prof-foto img{object-position:center 18%}
   .bpo-lista{grid-template-columns:1fr}
   .bpo-painel{padding:26px}
   .bpo-nums{grid-template-columns:1fr}
@@ -390,7 +399,7 @@ footer .marca{margin-bottom:18px}
     </div>
     <div class="hero-visual">
       <div class="circulo">
-        <img src="assets/brand/jjm-simbolo-420.webp" alt="Símbolo JJM Associados" width="420" height="530" decoding="async">
+        <img src="assets/brand/jjm-simbolo-420.webp" fetchpriority="high" alt="Símbolo JJM Associados" width="420" height="530">
       </div>
     </div>
   </div>
@@ -433,41 +442,25 @@ footer .marca{margin-bottom:18px}
 </section>
 
 <!-- ============================================================
-     SEÇÃO EQUIPE — GUARDADA NA MANGA (oculta)
-     Para publicar: no <script> do fim da página, troque
-     const MOSTRAR_EQUIPE = false;  ->  true
-     Depois ajuste nomes, fotos (assets/equipe/nome.jpg) e formação.
+     SEÇÃO EQUIPE (publicada)
+     Ligada por const MOSTRAR_EQUIPE = true; no <script> do fim da página.
+     Para esconder de novo: false.
+     3º profissional: tire data-reserva do card reservado e preencha os dados.
      ============================================================ -->
-<section class="equipe" id="equipe" data-oculta="true">
+<section class="equipe" id="equipe">
   <div class="container">
     <div class="cab rev">
       <span class="tag">Nossa equipe</span>
       <h2 class="titulo">A contabilidade da sua empresa nas mãos de <span>quem sabe o que faz</span></h2>
-      <p class="sub">Profissionais qualificados e com mais de 10 anos de experiência no setor, atuando lado a lado com o seu negócio.</p>
+      <p class="sub">Profissionais qualificados e com mais de 10 anos de experiência no setor contábil, atuando lado a lado com o seu negócio.</p>
     </div>
     <div class="equipe-grid">
       <article class="prof rev">
         <div class="prof-foto">
-          <!-- <img src="assets/equipe/profissional-1.jpg" alt="Nome do profissional"> -->
-          <span class="iniciais">JJ</span>
+          <img src="assets/equipe/jessica-arroyo.webp" srcset="assets/equipe/jessica-arroyo-420.webp 420w, assets/equipe/jessica-arroyo.webp 640w" sizes="(max-width:620px) 88vw, 340px" alt="Jéssica Arroyo, sócia e responsável pelo tributário e financeiro da JJM Associados" width="640" height="800" loading="lazy" decoding="async">
         </div>
         <div class="prof-info">
-          <h3>Nome do profissional</h3>
-          <span class="cargo">Sócio · Contador responsável</span>
-          <ul>
-            <li>Formado em Ciências Contábeis</li>
-            <li>Especialista em Reforma Tributária</li>
-            <li>Especialista em Legalização de Empresas</li>
-          </ul>
-        </div>
-      </article>
-      <article class="prof rev">
-        <div class="prof-foto">
-          <!-- <img src="assets/equipe/profissional-2.jpg" alt="Nome do profissional"> -->
-          <span class="iniciais">JJ</span>
-        </div>
-        <div class="prof-info">
-          <h3>Nome do profissional</h3>
+          <h3>Jéssica Arroyo</h3>
           <span class="cargo">Sócia · Tributário e Financeiro</span>
           <ul>
             <li>Formada em Ciências Contábeis</li>
@@ -478,17 +471,31 @@ footer .marca{margin-bottom:18px}
       </article>
       <article class="prof rev">
         <div class="prof-foto">
-          <!-- <img src="assets/equipe/profissional-3.jpg" alt="Nome do profissional"> -->
+          <img src="assets/equipe/michel-juniano.webp" srcset="assets/equipe/michel-juniano-420.webp 420w, assets/equipe/michel-juniano.webp 640w" sizes="(max-width:620px) 88vw, 340px" alt="Michel Juniano, sócio e contador responsável da JJM Associados" width="640" height="800" loading="lazy" decoding="async">
+        </div>
+        <div class="prof-info">
+          <h3>Michel Juniano</h3>
+          <span class="cargo">Sócio · Contador responsável</span>
+          <ul>
+            <li>Formado em Ciências Contábeis</li>
+            <li>Especialista em Reforma Tributária</li>
+            <li>Especialista em Legalização de Empresas</li>
+          </ul>
+        </div>
+      </article>
+      <!-- CARD RESERVADO: 3º profissional. Para publicar, tire o atributo data-reserva
+           e preencha foto, nome, cargo e formação. O grid se ajusta sozinho para 3 colunas. -->
+      <article class="prof rev" data-reserva="true">
+        <div class="prof-foto">
           <span class="iniciais">JJ</span>
         </div>
         <div class="prof-info">
           <h3>Nome do profissional</h3>
-          <span class="cargo">Sócia · Departamento Pessoal</span>
+          <span class="cargo">Sócio · Departamento Pessoal</span>
           <ul>
-            <li>Formada em Ciências Contábeis</li>
-            <li>Pós-graduada em Direito do Trabalho</li>
+            <li>Formado em Ciências Contábeis</li>
+            <li>Pós-graduado em Direito do Trabalho</li>
             <li>Especialista em Gestão Financeira e RH</li>
-            <li>Regularização de clínicas e consultórios</li>
           </ul>
         </div>
       </article>
@@ -812,17 +819,12 @@ footer .marca{margin-bottom:18px}
    false = seção fica guardada na manga (oculta e fora do menu)
    true  = seção é publicada no site, com link automático no menu
    ============================================================ */
-const MOSTRAR_EQUIPE = false;
+const MOSTRAR_EQUIPE = true;
 
 (function equipe(){
   const sec = document.getElementById('equipe');
   if(!sec) return;
-  if(!MOSTRAR_EQUIPE){
-    sec.style.display = 'none';
-    sec.removeAttribute('data-oculta');
-    return;
-  }
-  sec.removeAttribute('data-oculta');
+  if(!MOSTRAR_EQUIPE){ sec.style.display = 'none'; return; }
   const menu = document.getElementById('menu');
   const li = document.createElement('li');
   li.innerHTML = '<a href="#equipe">Equipe</a>';
